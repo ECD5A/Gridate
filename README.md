@@ -1,32 +1,4 @@
-# Gridate
-
-## About
-
-Visual Activity Timeline Planner for browser-based activity datasets.
-
-[**ecd5a.github.io/Gridate/**](https://ecd5a.github.io/Gridate/)
-
-<p align="center">
-  <a href="https://ecd5a.github.io/Gridate/"><img alt="Open Gridate" src="https://img.shields.io/badge/Open_Gridate-8b5cf6?logo=github&logoColor=white"></a>
-  <a href="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/marketplace/actions/gridate-activity-calendar-generator"><img alt="Marketplace" src="https://img.shields.io/badge/GitHub_Marketplace-Gridate-8b5cf6?logo=github&logoColor=white"></a>
-  <a href="https://github.com/ECD5A/Gridate/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/ECD5A/Gridate?display_name=tag&logo=github"></a>
-  <a href="https://github.com/ECD5A/Gridate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ECD5A/Gridate?style=flat&logo=github"></a>
-</p>
-
-Gridate is a local-first visual planner for painting date-based activity, shaping contribution-style calendars, and exporting a structured timeline.
-
-## Features
-
-- GitHub-style contribution calendars for any date range
-- Left-click add and right-click subtract by default
-- Drag painting, event times, targets, history, undo and redo
-- TXT and JSON exports with RU/EN interface and Light/Dark themes
-- No account, backend, analytics, or repository access
-
-## GitHub Action
-
-The same repository includes **Gridate Activity Calendar Generator** for GitHub Actions. It turns JSON or CSV activity data into accessible light and dark SVG calendars for profile READMEs, project pages, release notes, and documentation.
+# Gridate Activity Calendar Generator
 
 <p align="center">
   <picture>
@@ -36,11 +8,112 @@ The same repository includes **Gridate Activity Calendar Generator** for GitHub 
   </picture>
 </p>
 
-[Use Gridate Activity Calendar Generator in GitHub Marketplace](https://github.com/marketplace/actions/gridate-activity-calendar-generator)
+<p align="center">
+  <strong>Generate GitHub-style activity calendars from JSON or CSV inside GitHub Actions.</strong><br>
+  Light and dark SVG output · accessible tooltips · no API token · no external requests
+</p>
+
+<p align="center">
+  <a href="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/ECD5A/Gridate/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/ECD5A/Gridate?display_name=tag&logo=github"></a>
+  <a href="https://github.com/ECD5A/Gridate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ECD5A/Gridate?style=flat&logo=github"></a>
+</p>
+
+## What it does
+
+Gridate Activity Calendar Generator turns activity data into contribution-style SVG calendars for profile READMEs, project pages, release notes, and documentation.
+
+- JSON objects, JSON arrays, and CSV input
+- Arbitrary date ranges with optional `from` and `to` values
+- Light, dark, or automatic theme output
+- Accessible SVG titles, descriptions, legends, and day tooltips
+- Stable output paths for scheduled README updates
+- Action outputs for generated files, active days, and total activity
+
+## Quick start
+
+```yaml
+name: Update Gridate calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Gridate calendars
+        uses: ECD5A/Gridate@v1
+        with:
+          data-file: data/activity.json
+          output-dir: assets
+          base-name: gridate
+          title: My activity
+          theme: auto
+
+      - name: Commit generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/gridate.svg assets/gridate-dark.svg
+          git diff --cached --quiet || git commit -m "Update Gridate activity calendar"
+          git push
+```
+
+## Input formats
+
+JSON can be an object keyed by ISO date:
+
+```json
+{
+  "2026-01-05": 2,
+  "2026-01-12": 4,
+  "2026-02-03": 3
+}
+```
+
+Or an array of records:
+
+```json
+[
+  { "date": "2026-01-05", "count": 2 },
+  { "date": "2026-01-12", "count": 4 }
+]
+```
+
+CSV uses `date,count` columns:
+
+```csv
+date,count
+2026-01-05,2
+2026-01-12,4
+```
+
+## Embed the generated calendar
+
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/gridate-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/gridate.svg">
+  <img src="./assets/gridate.svg" alt="Activity calendar">
+</picture>
+```
+
+## The Gridate project
+
+The same repository includes a local-first visual planner for shaping date-based activity and exporting structured timelines. It requires no account, backend, analytics, or repository access.
 
 ## Privacy
 
-Gridate runs locally in the browser. Timeline data stays in local storage, and the Action does not request external activity data or require an API token.
+The planner runs locally in the browser. Timeline data stays in local storage, and the Action does not request external activity data or require an API token.
 
 ## Support
 
