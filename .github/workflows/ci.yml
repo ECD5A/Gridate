@@ -25,5 +25,9 @@ jobs:
         run: npm run typecheck
       - name: Test
         run: npm run test:run
+      - name: Test action renderer
+        run: npm run test:action
       - name: Build
         run: npm run build
+      - name: Render action preview
+        run: npm run render:action-preview

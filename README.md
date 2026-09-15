@@ -1,69 +1,46 @@
 # Gridate
 
-Visual Activity Timeline Planner.
+## About
 
-[![CI](https://github.com/ECD5A/gridate/actions/workflows/ci.yml/badge.svg)](https://github.com/ECD5A/gridate/actions/workflows/ci.yml)
-[![Live demo](https://img.shields.io/badge/live_demo-ecd5a.github.io%2Fgridate-8b5cf6?logo=github)](https://ecd5a.github.io/gridate/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-34d399.svg)](LICENSE)
+Visual Activity Timeline Planner for browser-based activity datasets.
 
-Gridate is a small browser tool for painting date-based activity patterns, assigning events to days, and exporting a structured chronological history.
+[**ecd5a.github.io/Gridate/**](https://ecd5a.github.io/Gridate/)
 
-[Live demo](https://ecd5a.github.io/gridate/)
+<p align="center">
+  <a href="https://ecd5a.github.io/Gridate/"><img alt="Open Gridate" src="https://img.shields.io/badge/Open_Gridate-8b5cf6?logo=github&logoColor=white"></a>
+  <a href="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/marketplace/actions/gridate-activity-calendar"><img alt="Marketplace" src="https://img.shields.io/badge/GitHub_Marketplace-Gridate-8b5cf6?logo=github&logoColor=white"></a>
+  <a href="https://github.com/ECD5A/Gridate/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/ECD5A/Gridate?display_name=tag&logo=github"></a>
+  <a href="https://github.com/ECD5A/Gridate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ECD5A/Gridate?style=flat&logo=github"></a>
+</p>
+
+Gridate is a local-first visual planner for painting date-based activity, shaping contribution-style calendars, and exporting a structured timeline.
 
 ## Features
 
-- Contribution-style calendar for any date range
-- Three-year starting range based on the current calendar year
-- Left-click add / right-click subtract by default, with a reversible mouse mode
-- Drag painting with one update per visited cell
-- Exact day counts from 0 to 99
-- Manual event times and random time generation
-- Target tracking, totals, active days, yearly breakdown and remaining count
-- Readable and technical history views
-- Copy, TXT export and JSON export
-- Undo, redo and clear confirmation
-- RU/EN language switch and Light/Dark themes
-- Browser-only persistence through versioned `localStorage`
-- No account, backend, analytics or repository access
+- GitHub-style contribution calendars for any date range
+- Left-click add and right-click subtract by default
+- Drag painting, event times, targets, history, undo and redo
+- TXT and JSON exports with RU/EN interface and Light/Dark themes
+- No account, backend, analytics, or repository access
 
-## Getting Started
+## GitHub Action
 
-Requirements: Node.js 22.22+ or 24.15+ and npm.
+The same repository includes **Gridate Activity Calendar** for GitHub Actions. It turns JSON or CSV activity data into accessible light and dark SVG calendars for profile READMEs, project pages, release notes, and documentation.
 
-```bash
-npm install
-npm run dev
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./action-preview/gridate-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./action-preview/gridate.svg">
+    <img src="./action-preview/gridate.svg" alt="Gridate Activity Calendar preview" width="920">
+  </picture>
+</p>
 
-Open the local Vite URL shown in the terminal.
+[Use Gridate Activity Calendar in GitHub Marketplace](https://github.com/marketplace/actions/gridate-activity-calendar)
 
-## Production Build
+## Privacy
 
-```bash
-npm run typecheck
-npm run test:run
-npm run build
-npm run preview
-```
-
-The generated `dist/` directory is ready for static hosting on GitHub Pages, Vercel, Netlify or any equivalent host.
-
-## Data and Privacy
-
-Gridate is intentionally local-first:
-
-- no account;
-- no backend;
-- no analytics by default;
-- no GitHub, GitLab or repository access;
-- no network request is needed for the planner;
-- timeline data stays in the browser's local storage.
-
-## Tech Stack
-
-React, TypeScript, Vite, native CSS, Vitest and React Testing Library-compatible DOM tests.
-
-The project follows a CSS-first, dependency-light UI policy. The contribution calendar is a native Gridate component rather than a copy of a third-party component collection.
+Gridate runs locally in the browser. Timeline data stays in local storage, and the Action does not request external activity data or require an API token.
 
 ## Support
 

@@ -1,0 +1,48 @@
+name: Gridate Activity Calendar
+description: Generate GitHub-style activity calendar SVGs from JSON or CSV data.
+author: ECD5A
+branding:
+  icon: calendar
+  color: purple
+inputs:
+  data-file:
+    description: Relative path to a JSON or CSV activity file.
+    required: true
+  output-dir:
+    description: Directory where generated SVG files are written.
+    required: false
+    default: dist
+  base-name:
+    description: Filename stem for the generated calendars.
+    required: false
+    default: gridate
+  title:
+    description: Accessible title shown above the activity calendar.
+    required: false
+    default: Gridate Activity
+  from:
+    description: Optional first date in YYYY-MM-DD format.
+    required: false
+  to:
+    description: Optional last date in YYYY-MM-DD format.
+    required: false
+  theme:
+    description: Generate light and dark files with auto, or one selected theme.
+    required: false
+    default: auto
+  include-legend:
+    description: Include the GitHub-style activity legend.
+    required: false
+    default: true
+outputs:
+  light-svg:
+    description: Relative path to the generated light SVG, when enabled.
+  dark-svg:
+    description: Relative path to the generated dark SVG, when enabled.
+  active-days:
+    description: Number of days with activity above zero.
+  total-activity:
+    description: Sum of all activity values in the selected range.
+runs:
+  using: node24
+  main: action-dist/index.js

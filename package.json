@@ -2,7 +2,7 @@
   "name": "gridate",
   "private": true,
   "version": "1.0.0",
-  "description": "Visual Activity Timeline Planner for browser-based activity datasets.",
+  "description": "Visual Activity Timeline Planner and GitHub Action for activity calendar SVGs.",
   "homepage": "https://ecd5a.github.io/Gridate/",
   "engines": {
     "node": "^22.22.2 || >=24.15.0"
@@ -11,15 +11,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run build:app && npm run build:action",
+    "build:app": "tsc -b && vite build",
+    "build:action": "ncc build action-src/main.js -o action-dist",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:run": "vitest run",
+    "test": "vitest --exclude=action-test/**",
+    "test:run": "vitest run --exclude=action-test/**",
+    "test:action": "node --test action-test/renderer.test.js",
+    "render:action-preview": "node scripts/render-action-preview.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
+    "@actions/core": "latest",
     "@vitejs/plugin-react": "latest",
     "jsdom": "latest",
     "react": "latest",
@@ -29,6 +34,7 @@
     "vitest": "latest"
   },
   "devDependencies": {
+    "@vercel/ncc": "latest",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7"
   }
