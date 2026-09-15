@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "Visual Activity Timeline Planner for browser-based activity datasets.",
-  "homepage": "https://ecd5a.github.io/gridate/",
+  "homepage": "https://ecd5a.github.io/Gridate/",
   "engines": {
     "node": "^22.22.2 || >=24.15.0"
   },
