@@ -8,7 +8,7 @@ Visual Activity Timeline Planner.
 
 Gridate is a small browser tool for painting date-based activity patterns, assigning events to days, and exporting a structured chronological history.
 
-[Live demo](https://ecd5a.github.io/gridate/) · [GitHub repository](https://github.com/ECD5A/gridate)
+[Live demo](https://ecd5a.github.io/gridate/)
 
 ## Features
 
