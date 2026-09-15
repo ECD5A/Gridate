@@ -1,4 +1,4 @@
-name: Gridate Activity Calendar
+name: Gridate Activity Calendar Generator
 description: Generate GitHub-style activity calendar SVGs from JSON or CSV data.
 author: ECD5A
 branding:

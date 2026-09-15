@@ -9,7 +9,7 @@ Visual Activity Timeline Planner for browser-based activity datasets.
 <p align="center">
   <a href="https://ecd5a.github.io/Gridate/"><img alt="Open Gridate" src="https://img.shields.io/badge/Open_Gridate-8b5cf6?logo=github&logoColor=white"></a>
   <a href="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/marketplace/actions/gridate-activity-calendar"><img alt="Marketplace" src="https://img.shields.io/badge/GitHub_Marketplace-Gridate-8b5cf6?logo=github&logoColor=white"></a>
+  <a href="https://github.com/marketplace/actions/gridate-activity-calendar-generator"><img alt="Marketplace" src="https://img.shields.io/badge/GitHub_Marketplace-Gridate-8b5cf6?logo=github&logoColor=white"></a>
   <a href="https://github.com/ECD5A/Gridate/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/ECD5A/Gridate?display_name=tag&logo=github"></a>
   <a href="https://github.com/ECD5A/Gridate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ECD5A/Gridate?style=flat&logo=github"></a>
 </p>
@@ -26,17 +26,17 @@ Gridate is a local-first visual planner for painting date-based activity, shapin
 
 ## GitHub Action
 
-The same repository includes **Gridate Activity Calendar** for GitHub Actions. It turns JSON or CSV activity data into accessible light and dark SVG calendars for profile READMEs, project pages, release notes, and documentation.
+The same repository includes **Gridate Activity Calendar Generator** for GitHub Actions. It turns JSON or CSV activity data into accessible light and dark SVG calendars for profile READMEs, project pages, release notes, and documentation.
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./action-preview/gridate-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./action-preview/gridate.svg">
-    <img src="./action-preview/gridate.svg" alt="Gridate Activity Calendar preview" width="920">
+    <img src="./action-preview/gridate.svg" alt="Gridate Activity Calendar Generator preview" width="920">
   </picture>
 </p>
 
-[Use Gridate Activity Calendar in GitHub Marketplace](https://github.com/marketplace/actions/gridate-activity-calendar)
+[Use Gridate Activity Calendar Generator in GitHub Marketplace](https://github.com/marketplace/actions/gridate-activity-calendar-generator)
 
 ## Privacy
 
