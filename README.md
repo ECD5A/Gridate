@@ -1,7 +1,3 @@
-## About
-
-Visual Activity Timeline Planner for browser-based activity datasets.
-
 <p align="center">
   <a href="https://ecd5a.github.io/Gridate/"><img alt="Open Gridate" src="https://img.shields.io/badge/Open_Gridate-8b5cf6?logo=github&logoColor=white"></a>
   <a href="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ECD5A/Gridate/actions/workflows/ci.yml/badge.svg"></a>
