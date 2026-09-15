@@ -1,0 +1,32 @@
+{
+  "name": "gridate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Visual Activity Timeline Planner for browser-based activity datasets.",
+  "homepage": "https://ecd5a.github.io/gridate/",
+  "keywords": ["timeline", "activity-planner", "contribution-calendar", "productivity", "visualization"],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@vitejs/plugin-react": "latest",
+    "jsdom": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7"
+  }
+}
