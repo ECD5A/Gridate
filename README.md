@@ -82,7 +82,3 @@ If Gridate is useful to your work, support its continued maintenance:
   &nbsp;
   <a href="https://github.com/ECD5A/Tkach-Security" aria-label="GitHub repository"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/FFFFFF"><img alt="GitHub repository" height="24" src="https://cdn.simpleicons.org/github/181717"></picture></a>
 </p>
-
-## License
-
-MIT. See [LICENSE](LICENSE).
