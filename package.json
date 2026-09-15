@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Visual Activity Timeline Planner for browser-based activity datasets.",
   "homepage": "https://ecd5a.github.io/gridate/",
+  "engines": {
+    "node": "^22.22.2 || >=24.15.0"
+  },
   "keywords": ["timeline", "activity-planner", "contribution-calendar", "productivity", "visualization"],
   "type": "module",
   "scripts": {
