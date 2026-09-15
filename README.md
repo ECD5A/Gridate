@@ -65,9 +65,9 @@ React, TypeScript, Vite, native CSS, Vitest and React Testing Library-compatible
 
 The project follows a CSS-first, dependency-light UI policy. The contribution calendar is a native Gridate component rather than a copy of a third-party component collection.
 
-## Donate
+## Support Gridate
 
-If README Arcade helped your profile, tips are welcome:
+If Gridate is useful for your activity planning, tips are welcome:
 
 ```yaml
 TON: pointoncurve.ton
