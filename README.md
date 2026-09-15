@@ -1,5 +1,3 @@
-# Gridate
-
 ## About
 
 Visual Activity Timeline Planner for browser-based activity datasets.
