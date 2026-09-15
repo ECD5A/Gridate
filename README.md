@@ -69,11 +69,9 @@ The project follows a CSS-first, dependency-light UI policy. The contribution ca
 
 If Gridate is useful for your activity planning, tips are welcome:
 
-```yaml
-TON: pointoncurve.ton
-BTC: 1ECDSA1b4d5TcZHtqNpcxmY8pBH1GgHntN
-USDT (TRC20): TUF4vPdB6QkjCvZq18rBL4Qj4dK5ihCN75
-```
+- **TON:** pointoncurve.ton
+- **BTC:** 1ECDSA1b4d5TcZHtqNpcxmY8pBH1GgHntN
+- **USDT (TRC20):** TUF4vPdB6QkjCvZq18rBL4Qj4dK5ihCN75
 
 ## License
 
