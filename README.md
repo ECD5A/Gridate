@@ -1,13 +1,5 @@
 # Gridate
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./action-preview/gridate-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./action-preview/gridate.svg">
-    <img src="./action-preview/gridate.svg" alt="Gridate Activity Calendar Generator preview" width="920">
-  </picture>
-</p>
-
 ## About
 
 Visual Activity Timeline Planner for browser-based activity datasets.
@@ -18,6 +10,14 @@ Visual Activity Timeline Planner for browser-based activity datasets.
   <a href="https://github.com/marketplace/actions/gridate-activity-calendar-generator"><img alt="Marketplace" src="https://img.shields.io/badge/GitHub_Marketplace-Gridate-8b5cf6?logo=github&logoColor=white"></a>
   <a href="https://github.com/ECD5A/Gridate/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/ECD5A/Gridate?display_name=tag&logo=github"></a>
   <a href="https://github.com/ECD5A/Gridate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ECD5A/Gridate?style=flat&logo=github"></a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./action-preview/gridate-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./action-preview/gridate.svg">
+    <img src="./action-preview/gridate.svg" alt="Gridate Activity Calendar Generator preview" width="920">
+  </picture>
 </p>
 
 Gridate is a local-first visual planner for painting date-based activity, shaping contribution-style calendars, and exporting a structured timeline.
